@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#253b2c">
+  <meta name="description" content="Bean Rooted Café — Pause. Reflect. Relax. Visit us at Purok Nazareth 2, Buenavista, Pagadian City, daily from 12 PM to 11 PM.">
+  <title>Bean Rooted Café | Pause. Reflect. Relax.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--forest:#253b2c;--moss:#526b4c;--cream:#f6f1e7;--paper:#fffdf8;--clay:#b77b55;--ink:#242820;--muted:#6e7167}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}
+    header{position:absolute;z-index:5;top:0;left:0;width:100%;color:white;padding:24px 0}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.02em}
+    .mark{width:42px;height:42px;border:1px solid #ffffff99;border-radius:50%;display:grid;place-items:center;font-family:"Playfair Display";font-size:23px}
+    .navlinks{display:flex;gap:30px;align-items:center;font-size:13px;font-weight:600}.navlinks a{opacity:.9}.navlinks a:hover{opacity:1}
+    .nav-cta{border:1px solid #ffffffa8;padding:11px 17px;border-radius:99px}
+    .menu{display:none;background:none;border:1px solid #ffffff88;color:white;border-radius:50%;width:42px;height:42px;font-size:20px}
+    .hero{min-height:730px;display:flex;align-items:center;position:relative;overflow:hidden;color:white;background:linear-gradient(90deg,rgba(19,35,25,.84),rgba(19,35,25,.43)),url('assets/bean-rooted-dessert.jpg') center/cover}
+    .hero:after{content:"";position:absolute;inset:auto 0 0;height:150px;background:linear-gradient(transparent,var(--cream))}
+    .hero-inner{position:relative;z-index:1;padding:135px 0 150px;max-width:720px}
+    .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#e3c6a7;font-weight:700}
+    h1,h2,h3{font-family:"Playfair Display",serif;font-weight:500}h1{font-size:clamp(52px,7.5vw,92px);line-height:.99;margin:22px 0}
+    .hero p{font-size:17px;line-height:1.8;color:#f1eee6;max-width:520px;margin:0 0 32px}
+    .actions{display:flex;gap:13px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:99px;font-weight:700;font-size:13px;transition:.2s}
+    .btn-light{background:var(--cream);color:var(--forest)}.btn-outline{border:1px solid #ffffffa8;color:white}.btn:hover{transform:translateY(-2px)}
+    section{padding:100px 0}.intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .intro-art{min-height:440px;position:relative}.intro-art img{width:82%;height:420px;object-fit:cover;border-radius:48% 48% 8px 8px;display:block}
+    .stamp{position:absolute;right:0;bottom:16px;width:150px;height:150px;border-radius:50%;background:var(--clay);color:white;display:grid;place-items:center;text-align:center;font-family:"Playfair Display";font-size:21px;line-height:1.2;transform:rotate(8deg);padding:20px}
+    .intro h2,.section-head h2{font-size:clamp(38px,5vw,58px);line-height:1.08;margin:16px 0 22px;color:var(--forest)}
+    .copy{font-size:15px;line-height:1.9;color:var(--muted)}.signature{font-family:"Playfair Display";font-style:italic;color:var(--moss);font-size:22px;margin-top:28px}
+    .band{background:var(--forest);color:var(--cream);padding:74px 0}.band-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;text-align:center}
+    .band-item{padding:10px 18px}.band-item .num{font-family:"Playfair Display";font-size:43px;color:#d7b28f}.band-item h3{font-size:23px;margin:8px 0}.band-item p{font-size:13px;color:#d1d5ca;line-height:1.7;margin:0}
+    .section-head{text-align:center;max-width:650px;margin:0 auto 48px}.section-head .copy{max-width:550px;margin:auto}
+    .gallery{display:grid;grid-template-columns:1.15fr .85fr .85fr;grid-template-rows:240px 240px;gap:16px}
+    .gallery figure{margin:0;overflow:hidden;border-radius:8px;position:relative;background:#d8d2c5}.gallery figure:first-child{grid-row:span 2}
+    .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.gallery figure:hover img{transform:scale(1.04)}
+    .gallery figcaption{position:absolute;bottom:0;left:0;right:0;padding:28px 18px 16px;color:white;font-size:13px;background:linear-gradient(transparent,#0009)}
+    .visit{background:#e9e3d7}.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+    .visit h2{font-size:clamp(38px,5vw,56px);color:var(--forest);line-height:1.08;margin:15px 0 24px}
+    .detail{display:flex;gap:16px;margin:24px 0;align-items:flex-start}.detail-icon{width:42px;height:42px;flex:none;border-radius:50%;background:#d8d4c7;color:var(--forest);display:grid;place-items:center}
+    .detail strong{display:block;font-size:14px;margin:2px 0 5px}.detail span{font-size:13px;color:var(--muted);line-height:1.6}
+    .map-card{background:var(--paper);padding:12px;border-radius:12px;box-shadow:0 18px 50px #263b2c12}.map-card iframe{width:100%;height:370px;border:0;border-radius:7px}
+    footer{background:#1d3024;color:#f4efe5;padding:55px 0 28px}.footer-top{display:flex;justify-content:space-between;gap:35px;align-items:flex-start;padding-bottom:40px}.footer-brand{font-family:"Playfair Display";font-size:30px}.footer-top p{color:#c5c9bd;font-size:13px;line-height:1.7;max-width:320px}
+    .footer-links{display:flex;gap:22px;font-size:13px;color:#e0e2d9}.copyright{border-top:1px solid #ffffff25;padding-top:22px;color:#aeb7aa;font-size:11px;display:flex;justify-content:space-between;gap:15px}
+    @media(max-width:760px){.wrap{width:min(100% - 34px,600px)}header{padding:16px 0}.navlinks{display:none;position:absolute;top:70px;left:17px;right:17px;background:var(--forest);padding:22px;border-radius:12px;flex-direction:column;align-items:flex-start;gap:20px}.navlinks.open{display:flex}.menu{display:block}.hero{min-height:680px}.hero-inner{padding:125px 0 130px}.hero p{font-size:15px}section{padding:72px 0}.intro,.visit-grid{grid-template-columns:1fr;gap:38px}.intro-art{min-height:350px}.intro-art img{height:340px;width:86%}.stamp{width:120px;height:120px;font-size:17px}.band-grid{grid-template-columns:1fr;gap:35px}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:230px 180px 180px}.gallery figure:first-child{grid-row:span 2}.gallery figure:last-child{grid-column:span 2}.map-card iframe{height:300px}.footer-top{flex-direction:column}.copyright{flex-direction:column}.nav-cta{display:none}}
+  </style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#home"><span class="mark">B</span><span>BEAN ROOTED CAFÉ</span></a>
+  <nav class="navlinks" id="navlinks"><a href="#story">OUR STORY</a><a href="#gallery">THE SPACE</a><a href="#visit">FIND US</a><a class="nav-cta" href="https://www.facebook.com/profile.php?id=61578257812484&sk=about" target="_blank" rel="noopener">CONNECT WITH US ↗</a></nav>
+  <button class="menu" aria-label="Open menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+</div></header>
+<main>
+  <section class="hero" id="home"><div class="wrap"><div class="hero-inner">
+    <div class="eyebrow">A little place to slow down</div>
+    <h1>Rooted in good<br>moments.</h1>
+    <p>Take a breath, find your favorite corner, and make room for the little moments that matter. Welcome to Bean Rooted Café.</p>
+    <div class="actions"><a class="btn btn-light" href="#visit">Come visit us</a><a class="btn btn-outline" href="https://www.facebook.com/profile.php?id=61578257812484&sk=about" target="_blank" rel="noopener">Find us on Facebook ↗</a></div>
+  </div></div></section>
+  <section id="story"><div class="wrap intro">
+    <div class="intro-art"><img src="assets/bean-rooted-coffee.jpg" alt="Coffee being prepared in a cozy café"><div class="stamp">Pause.<br>Reflect.<br>Relax.</div></div>
+    <div><div class="eyebrow">Welcome to Bean Rooted</div><h2>Your everyday<br>coffee pause.</h2>
+      <p class="copy">Some days call for a little reset. Some moments deserve to last a little longer. Bean Rooted Café is a place to pause, catch up, and enjoy the simple comfort of a café moment.</p>
+      <p class="copy">Whether you're meeting someone or taking time for yourself, there's always room to slow down and feel at home.</p>
+      <div class="signature">Pause. Reflect. Relax.</div>
+    </div>
+  </div></section>
+  <div class="band"><div class="wrap band-grid">
+    <div class="band-item"><div class="num">01</div><h3>Slow moments</h3><p>Make a little space in your day to pause and recharge.</p></div>
+    <div class="band-item"><div class="num">02</div><h3>Good company</h3><p>A welcoming spot for conversations and catch-ups.</p></div>
+    <div class="band-item"><div class="num">03</div><h3>Everyday comfort</h3><p>Your neighborhood café stop, whenever you need it.</p></div>
+  </div></div>
+  <section id="gallery"><div class="wrap"><div class="section-head"><div class="eyebrow">Take a look around</div><h2>A space to settle in.</h2><p class="copy">A cozy atmosphere for coffee breaks, conversations, and unhurried afternoons.</p></div>
+    <div class="gallery">
+      <figure><img src="assets/bean-rooted-cafe.jpg" alt="Bean Rooted Café outdoor seating and garden"><figcaption>Welcome to Bean Rooted</figcaption></figure>
+      <figure><img src="assets/bean-rooted-coffee.jpg" alt="Bean Rooted Café latte, coffee beans, and menu"><figcaption>Your coffee pause</figcaption></figure>
+      <figure><img src="assets/bean-rooted-dessert.jpg" alt="Dessert and takeaway coffee with Bean Rooted branding"><figcaption>A little treat</figcaption></figure>
+      <figure><img src="assets/bean-rooted-dessert.jpg" alt="Dessert served with Bean Rooted takeaway coffee"><figcaption>Enjoy the moment</figcaption></figure>
+      <figure><img src="assets/bean-rooted-cafe.jpg" alt="The leafy outdoor café space"><figcaption>Your café corner</figcaption></figure>
+    </div>
+  </div></section>
+  <section class="visit" id="visit"><div class="wrap visit-grid">
+    <div><div class="eyebrow">Come say hello</div><h2>Make us part<br>of your day.</h2><p class="copy">Drop by, take a break, and enjoy a little time for yourself at Bean Rooted Café.</p>
+      <div class="detail"><div class="detail-icon">⌖</div><div><strong>Find us</strong><span>Purok Nazareth 2, Buenavista,<br>Pagadian City, Philippines</span></div></div>
+      <div class="detail"><div class="detail-icon">◷</div><div><strong>We're open daily</strong><span>Monday to Sunday<br>12:00 PM – 11:00 PM</span></div></div>
+      <a class="btn" style="background:var(--forest);color:white;margin-top:8px" href="https://www.google.com/maps/search/?api=1&query=Bean+Rooted+Cafe%2C+Purok+Nazareth+2%2C+Buenavista%2C+Pagadian+City" target="_blank" rel="noopener">Get directions ↗</a>
+    </div>
+    <div class="map-card"><iframe title="Map showing Bean Rooted Café in Pagadian City" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Bean%20Rooted%20Cafe%2C%20Purok%20Nazareth%202%2C%20Buenavista%2C%20Pagadian%20City&output=embed"></iframe></div>
+  </div></section>
+</main>
+<footer><div class="wrap"><div class="footer-top"><div><div class="footer-brand">Bean Rooted Café</div><p>A little place to pause, reflect, and relax. Visit us in Buenavista, Pagadian City.</p></div><div class="footer-links"><a href="#story">Our story</a><a href="#gallery">The space</a><a href="#visit">Visit</a><a href="https://www.facebook.com/profile.php?id=61578257812484&sk=about" target="_blank" rel="noopener">Facebook ↗</a></div></div><div class="copyright"><span>© <span id="year"></span> Bean Rooted Café. All rights reserved.</span><span>Pause. Reflect. Relax.</span></div></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));</script>
+</body></html>
